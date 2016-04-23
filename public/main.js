@@ -55,7 +55,7 @@ function editPost() {
   post.time = newPost.addedT[1];
 
   if(newPost.name == '@') {
-    $('#name').addClass('has-error');
+    $('#edit-name').addClass('has-error');
     return;
   }
 
