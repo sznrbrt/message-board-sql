@@ -128,8 +128,8 @@ function addPost() {
   newPost.day = newPost.addedT[0] + ', ';
   newPost.time = newPost.addedT[1];
 
-  if(newPost.name == '@') {
-    $('#name').addClass('has-error');
+  if(newPost.name == '') {
+    $('#edit-name').addClass('has-error');
     return;
   }
 
