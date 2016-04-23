@@ -54,16 +54,16 @@ function editPost() {
   post.day = newPost.addedT[0] + ', ';
   post.time = newPost.addedT[1];
 
-  if(newPost.name == '') {
+  if(post.name == '') {
     $('#edit-name').addClass('has-error');
     return;
   }
 
-  if(newPost.post == '') {
+  if(post.post == '') {
     $('#post').text('This will be an empty post. Are you sure?');
     return;
   }
-  if(newPost.post === 'This will be an empty post. Are you sure?') {
+  if(post.post === 'This will be an empty post. Are you sure?') {
     newPost.post = "";
   }
 
@@ -129,7 +129,7 @@ function addPost() {
   newPost.time = newPost.addedT[1];
 
   if(newPost.name == '') {
-    $('#edit-name').addClass('has-error');
+    $('#name').addClass('has-error');
     return;
   }
 
