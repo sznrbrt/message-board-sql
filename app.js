@@ -7,8 +7,11 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const uuid = require('uuid');
+const favicon = require('serve-favicon');
+
 
 var app = express();
+app.use(favicon('./public/favicon.ico'));
 
 // general purpose middleware
 app.use( morgan('dev') );
@@ -25,6 +28,7 @@ app.get('/', (req, res, next) => {
 app.get('/board', (req, res, next) => {
   res.render('posts');
 })
+
 
 app.use('/api', require('./routes/api'));
 
